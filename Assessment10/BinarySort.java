@@ -1,17 +1,16 @@
-public class BinarySort {
-    public static void binarySort(int[] arr) {
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
-                count++;
+public class MaximumElement {
+    public static int findMax(int[] arr) {
+        int max = Integer.MIN_VALUE;
+        for (int num : arr) {
+            if (num > max) {
+                max = num;
             }
         }
-        for (int i = 0; i < arr.length; i++) {
-            if (i < count) {
-                arr[i] = 0;
-            } else {
-                arr[i] = 1;
-            }
-        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.println("Maximum element: " + findMax(arr));
     }
 }
