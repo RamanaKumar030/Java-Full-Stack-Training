@@ -44,3 +44,23 @@ public class Utils {
         return new Random().nextInt(9000) + 1000; // Generates a 4-digit ID
     }
 }
+
+
+//Librarymanage\Library\Main.java
+package Library; // Place Main.java in "Library" folder
+
+import Library.Books.Books;
+import Library.Members.Members;
+import Library.Utils.Utils;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a book
+        Books book1 = new Books("The Great Gatsby", "F. Scott Fitzgerald", Utils.generateId());
+        book1.displayBook();
+
+        // Creating a member
+        Members member1 = new Members("John Doe", Utils.generateId());
+        member1.displayMember();
+    }
+}
